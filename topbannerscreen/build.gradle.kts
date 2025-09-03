@@ -29,6 +29,10 @@ kotlin {
                 implementation(compose.material)
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
+                implementation(compose.material3)
+
+                // Lifecycle ViewModel support
+                implementation("org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose:2.8.0")
             }
         }
         val androidMain by getting {
@@ -36,6 +40,7 @@ kotlin {
                 api("androidx.activity:activity-compose:1.7.2")
                 api("androidx.appcompat:appcompat:1.6.1")
                 api("androidx.core:core-ktx:1.10.1")
+                api("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
             }
         }
         val iosX64Main by getting

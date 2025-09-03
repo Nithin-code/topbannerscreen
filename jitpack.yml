@@ -1,0 +1,4 @@
+jdk:
+  - openjdk17
+gradle:
+  version: 8.7

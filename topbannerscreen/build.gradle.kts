@@ -30,6 +30,7 @@ kotlin {
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
                 implementation(compose.material3)
+                implementation("org.jetbrains.compose.components:components-resources:1.8.2")
 
                 // Lifecycle ViewModel support
                 implementation("org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose:2.8.0")

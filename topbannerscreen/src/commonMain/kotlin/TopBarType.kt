@@ -2,6 +2,7 @@
 import androidx.compose.ui.graphics.Color
 import org.jetbrains.compose.resources.DrawableResource
 
+
 sealed class TopBarType(
     val textColor : Color = Color.Black,
     val backgroundColor : Color = Color.White,

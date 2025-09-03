@@ -32,15 +32,6 @@ fun StatusBar(
         verticalAlignment = Alignment.CenterVertically,
     ) {
 
-        topBarType.icon?.let { icon->
-            Icon(
-                modifier = Modifier.size(24.dp),
-                painter = painterResource(icon),
-                contentDescription = topBarType.message,
-                tint = topBarType.textColor
-            )
-        }
-
 
 
         Spacer(modifier = Modifier.width(16.dp))

@@ -3,6 +3,18 @@ include(":topbannerscreen")
 
 
 pluginManagement {
+
+    val props = java.util.Properties().apply {
+        val file = File(settingsDir, "gradle.properties")
+        if (file.exists()) {
+            file.inputStream().use { load(it) }
+        }
+    }
+
+    val kotlinVersion = props["kotlin.version"] as String
+    val agpVersion = props["agp.version"] as String
+    val composeVersion = props["compose.version"] as String
+
     repositories {
         gradlePluginPortal()
         mavenCentral()
@@ -11,9 +23,6 @@ pluginManagement {
     }
 
     plugins {
-        val kotlinVersion = extra["kotlin.version"] as String
-        val agpVersion = extra["agp.version"] as String
-        val composeVersion = extra["compose.version"] as String
 
         kotlin("jvm").version(kotlinVersion)
         kotlin("multiplatform").version(kotlinVersion)

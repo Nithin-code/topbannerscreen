@@ -3,10 +3,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.lifecycle.ViewModel
 
 
-class TopBarViewModel : ViewModel() {
+
+class TopBarState {
 
     var topBarState : TopBarType by mutableStateOf(TopBarType.Idle)
 
@@ -27,8 +27,8 @@ class TopBarViewModel : ViewModel() {
 
 
 @Composable
-fun rememberBannerState() : TopBarViewModel {
+fun rememberBannerState() : TopBarState {
     return remember {
-        TopBarViewModel()
+        TopBarState()
     }
 }

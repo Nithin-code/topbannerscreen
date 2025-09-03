@@ -1,10 +1,9 @@
 plugins {
     // this is necessary to avoid the plugins to be loaded multiple times
     // in each subproject's classloader
-    kotlin("multiplatform").apply(false)
-    id("com.android.application").apply(false)
-    id("com.android.library").apply(false)
-    id("org.jetbrains.compose").apply(false)
+    kotlin("multiplatform") version "1.9.21" apply false
+    id("com.android.library") version "8.0.2" apply false
+    id("org.jetbrains.compose") version "1.5.11" apply false
 }
 
 
@@ -15,3 +14,4 @@ allprojects {
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 }
+

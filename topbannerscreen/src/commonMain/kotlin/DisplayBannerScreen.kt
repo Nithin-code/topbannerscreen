@@ -14,7 +14,7 @@ import kotlinx.coroutines.delay
 @Composable
 fun DisplayBannerScreen(
     modifier: Modifier = Modifier,
-    state : TopBarViewModel,
+    state : TopBarState,
     displayBannerForMillis : Long = 2000L,
     content : @Composable () -> Unit,
 ){

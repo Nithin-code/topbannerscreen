@@ -2,6 +2,7 @@ plugins {
     kotlin("multiplatform")
     id("com.android.library")
     id("org.jetbrains.compose")
+    id("maven-publish")
 }
 
 kotlin {
@@ -15,7 +16,7 @@ kotlin {
         iosSimulatorArm64()
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
-            baseName = "shared"
+            baseName = "topbannerscreen"
             isStatic = true
         }
     }
@@ -54,9 +55,19 @@ kotlin {
     }
 }
 
+publishing {
+    publications {
+        create<MavenPublication>("release") {
+            groupId = "com.github.Nithin-code" // your GitHub username
+            artifactId = "topbannerscreen"
+            version = "1.0.0"
+        }
+    }
+}
+
 android {
     compileSdk = (findProperty("android.compileSdk") as String).toInt()
-    namespace = "com.myapplication.common"
+    namespace = "com.nithin.topbannerscreen"
 
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     sourceSets["main"].res.srcDirs("src/androidMain/res")

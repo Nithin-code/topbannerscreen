@@ -1,8 +1,6 @@
-rootProject.name = "MyApplication"
+rootProject.name = "topbannerscreen"
+include(":topbannerscreen")
 
-include(":androidApp")
-include(":shared")
-include(":desktopApp")
 
 pluginManagement {
     repositories {
